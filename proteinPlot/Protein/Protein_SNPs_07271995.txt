@@ -1,0 +1,1 @@
+{'pos': 23403, 'mutation': 'A->G'},{'protein': 'spike_surface_glycoprotein', 'position': 614, 'mutation': 'D:G'}
