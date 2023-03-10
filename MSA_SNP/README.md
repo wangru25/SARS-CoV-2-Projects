@@ -71,19 +71,17 @@ python genomeMain.py
 
   ​                *badMutation2: if the data is corrupt and it is causing problem with the entire alignment data *most likely not needed
 
-  
+- In 2019-nCoV/genomeMSA_2021/snpRecords/, run 
 
-  - In 2019-nCoV/genomeMSA_2021/snpRecords/, run 
+  ```
+  python check.py 
+  ```
 
-    ```
-    python check.py 
-    ```
-
-    ​	*Open this in a compiler and change the subMonth, subMinDate, subMaxDate.
-    ​	This program double checks to make sure seqId is correct. 
-    ​	seqId format should be ISO-2-letter-countrycode|extra stuff|AccessionID (EPI_xxx)|date (year-month-date)
-    ​	*Date and country code is the most important.
-    ​	Sometimes, animal data will be mixed. Please remove these files.
+  ​	*Open this in a compiler and change the subMonth, subMinDate, subMaxDate.
+  ​	This program double checks to make sure seqId is correct. 
+​	seqId format should be ISO-2-letter-countrycode|extra stuff|AccessionID (EPI_xxx)|date (year-month-date)
+  ​	*Date and country code is the most important.
+​	Sometimes, animal data will be mixed. Please remove these files.
 
 ​	
 
