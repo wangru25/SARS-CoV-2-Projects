@@ -1,0 +1,195 @@
+
+
+<!--
+ * @Author: Rui Wang
+ * @Date: 2021-06-01 15:59:36
+ * @LastModifiedBy: Rui Wang
+ * @LastEditTime: 2021-06-02 08:57:54
+ * @Email: wangru25@msu.edu
+ * @FilePath: /38_Influ/analysis/WebDesign/web/bfe.html
+ * @Description: 
+-->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style>
+      th, td{ 
+        text-align: center; 
+        padding: 6px; 
+      }
+      th{
+        background-color: #6BAF92;
+        font-size: 18px;
+      }
+      tr:nth-child(even){ 
+        background-color: #B4D6C1;  
+      }
+      tr:nth-child(odd){
+        background-color: #DFEAE2;
+      }
+    </style>
+
+  </head>
+
+<body>
+
+
+ <div style="width:77%; margin-left:auto;margin-right:auto;"> 
+    <!-- data table is inserted here -->
+    <div>
+      <h1 style="font-family:verdana; text-align:center;font-size:200%">
+        Top 100 S protein RBD mutations
+      </h1>  
+      </p>
+      <h2 style="font-family:verdana; text-align:center;font-size:120%">
+        ---ranking, binding free energy (BFE) changes, and worldwide counts
+      </h2>
+      <hr />
+    </div>
+</div>
+
+
+<!-- insert sortable table from here -->
+
+  <table class="sortable" width="100%" border="0" cellspacing="1" style="width:77%; margin-left:auto;margin-right:auto;">
+    <tr><th>Rank/Mutation</th><th>Worldwdie counts</th><th>BFE change</th></tr>
+    <tr><td>1/N501Y</td><td>388294</td><td>0.5499</td></tr>
+    <tr><td>2/E484K</td><td>31142</td><td>0.0946</td></tr>
+    <tr><td>3/S477N</td><td>26139</td><td>0.0180</td></tr>
+    <tr><td>4/L452R</td><td>25430</td><td>0.5752</td></tr>
+    <tr><td>5/T478K</td><td>14146</td><td>0.9994</td></tr>
+    <tr><td>6/N439K</td><td>11899</td><td>0.1792</td></tr>
+    <tr><td>7/K417T</td><td>8481</td><td>0.0116</td></tr>
+    <tr><td>8/K417N</td><td>3993</td><td>0.1661</td></tr>
+    <tr><td>9/S494P</td><td>3075</td><td>0.0902</td></tr>
+    <tr><td>10/N501T</td><td>1672</td><td>0.4514</td></tr>
+    <tr><td>11/F490S</td><td>1633</td><td>0.4406</td></tr>
+    <tr><td>12/A520S</td><td>1619</td><td>0.1495</td></tr>
+    <tr><td>13/A522S</td><td>1147</td><td>0.1283</td></tr>
+    <tr><td>14/E484Q</td><td>1062</td><td>0.0057</td></tr>
+    <tr><td>15/V367F</td><td>900</td><td>0.1764</td></tr>
+    <tr><td>16/N440K</td><td>892</td><td>0.6161</td></tr>
+    <tr><td>17/P384L</td><td>753</td><td>0.2681</td></tr>
+    <tr><td>18/S477R</td><td>740</td><td>0.0820</td></tr>
+    <tr><td>19/D427N</td><td>581</td><td>-0.1133</td></tr>
+    <tr><td>20/R357K</td><td>507</td><td>0.1393</td></tr>
+    <tr><td>21/V367L</td><td>411</td><td>0.0465</td></tr>
+    <tr><td>22/Q414K</td><td>402</td><td>0.1234</td></tr>
+    <tr><td>23/L452M</td><td>382</td><td>0.5966</td></tr>
+    <tr><td>24/N450K</td><td>379</td><td>0.3535</td></tr>
+    <tr><td>25/P384S</td><td>375</td><td>0.1151</td></tr>
+    <tr><td>26/P330S</td><td>373</td><td>0.0533</td></tr>
+    <tr><td>27/A522V</td><td>369</td><td>0.0705</td></tr>
+    <tr><td>28/V382L</td><td>366</td><td>0.0355</td></tr>
+    <tr><td>29/L455F</td><td>304</td><td>-0.0415</td></tr>
+    <tr><td>30/R346S</td><td>290</td><td>0.0374</td></tr>
+    <tr><td>31/S477I</td><td>286</td><td>-0.0002</td></tr>
+    <tr><td>32/R346K</td><td>286</td><td>0.1234</td></tr>
+    <tr><td>33/V483F</td><td>280</td><td>0.5428</td></tr>
+    <tr><td>34/T478I</td><td>278</td><td>0.1269</td></tr>
+    <tr><td>35/P479S</td><td>255</td><td>0.3844</td></tr>
+    <tr><td>36/T385N</td><td>250</td><td>0.0049</td></tr>
+    <tr><td>37/Y453F</td><td>232</td><td>0.5225</td></tr>
+    <tr><td>38/Q414R</td><td>230</td><td>0.0708</td></tr>
+    <tr><td>39/F490L</td><td>228</td><td>0.5139</td></tr>
+    <tr><td>40/T385I</td><td>222</td><td>0.0314</td></tr>
+    <tr><td>41/A348S</td><td>187</td><td>0.4616</td></tr>
+    <tr><td>42/A475V</td><td>185</td><td>0.3069</td></tr>
+    <tr><td>43/G446V</td><td>182</td><td>0.1583</td></tr>
+    <tr><td>44/S359T</td><td>174</td><td>0.0243</td></tr>
+    <tr><td>45/A352S</td><td>166</td><td>0.2576</td></tr>
+    <tr><td>46/A522P</td><td>163</td><td>0.0901</td></tr>
+    <tr><td>47/R403K</td><td>162</td><td>0.1778</td></tr>
+    <tr><td>48/A344S</td><td>161</td><td>0.1605</td></tr>
+    <tr><td>49/N354K</td><td>158</td><td>0.1993</td></tr>
+    <tr><td>50/F486L</td><td>142</td><td>0.1456</td></tr>
+    <tr><td>51/G476S</td><td>138</td><td>0.1566</td></tr>
+    <tr><td>52/E471Q</td><td>128</td><td>0.5230</td></tr>
+    <tr><td>53/N440S</td><td>122</td><td>0.1499</td></tr>
+    <tr><td>54/Y508H</td><td>120</td><td>0.7562</td></tr>
+    <tr><td>55/E516Q</td><td>106</td><td>0.0608</td></tr>
+    <tr><td>56/A411S</td><td>105</td><td>0.5023</td></tr>
+    <tr><td>57/V503I</td><td>102</td><td>0.1303</td></tr>
+    <tr><td>58/V483A</td><td>98</td><td>0.6695</td></tr>
+    <tr><td>59/N481K</td><td>98</td><td>0.1084</td></tr>
+    <tr><td>60/L335F</td><td>98</td><td>0.0604</td></tr>
+    <tr><td>61/S373L</td><td>97</td><td>0.0220</td></tr>
+    <tr><td>62/E406Q</td><td>95</td><td>0.1717</td></tr>
+    <tr><td>63/T470I</td><td>95</td><td>0.0208</td></tr>
+    <tr><td>64/A520V</td><td>90</td><td>0.0995</td></tr>
+    <tr><td>65/T478R</td><td>90</td><td>-0.0100</td></tr>
+    <tr><td>66/R408I</td><td>90</td><td>0.1949</td></tr>
+    <tr><td>67/K458N</td><td>88</td><td>0.0032</td></tr>
+    <tr><td>68/R408K</td><td>88</td><td>0.0491</td></tr>
+    <tr><td>69/T376I</td><td>82</td><td>0.1338</td></tr>
+    <tr><td>70/A475S</td><td>80</td><td>-0.0732</td></tr>
+    <tr><td>71/T470N</td><td>78</td><td>-0.0310</td></tr>
+    <tr><td>72/N354D</td><td>76</td><td>0.1248</td></tr>
+    <tr><td>73/V367A</td><td>76</td><td>-0.0654</td></tr>
+    <tr><td>74/I410V</td><td>76</td><td>0.7105</td></tr>
+    <tr><td>75/K444N</td><td>74</td><td>0.1024</td></tr>
+    <tr><td>76/V362F</td><td>74</td><td>0.1082</td></tr>
+    <tr><td>77/S477G</td><td>70</td><td>-0.0234</td></tr>
+    <tr><td>78/G496S</td><td>70</td><td>0.0187</td></tr>
+    <tr><td>79/L517F</td><td>69</td><td>0.2432</td></tr>
+    <tr><td>80/P521S</td><td>68</td><td>0.1069</td></tr>
+    <tr><td>81/K356R</td><td>68</td><td>0.0412</td></tr>
+    <tr><td>82/Q493R</td><td>65</td><td>0.1271</td></tr>
+    <tr><td>83/S514F</td><td>62</td><td>0.3519</td></tr>
+    <tr><td>84/K444R</td><td>62</td><td>0.2006</td></tr>
+    <tr><td>85/K378N</td><td>60</td><td>0.0573</td></tr>
+    <tr><td>86/F338L</td><td>60</td><td>0.0239</td></tr>
+    <tr><td>87/G339D</td><td>60</td><td>0.1117</td></tr>
+    <tr><td>88/P463S</td><td>59</td><td>0.1144</td></tr>
+    <tr><td>89/I468V</td><td>59</td><td>0.0409</td></tr>
+    <tr><td>90/Y449H</td><td>58</td><td>-0.4881</td></tr>
+    <tr><td>91/A419S</td><td>53</td><td>0.4147</td></tr>
+    <tr><td>92/I434V</td><td>53</td><td>0.1286</td></tr>
+    <tr><td>93/T430I</td><td>53</td><td>0.0684</td></tr>
+    <tr><td>94/D427Y</td><td>52</td><td>0.1732</td></tr>
+    <tr><td>95/N370S</td><td>52</td><td>-0.0569</td></tr>
+    <tr><td>96/A372V</td><td>51</td><td>-0.0479</td></tr>
+    <tr><td>97/K529R</td><td>50</td><td>0.0209</td></tr>
+    <tr><td>98/Y449S</td><td>50</td><td>-0.8112</td></tr>
+    <tr><td>99/S459Y</td><td>49</td><td>0.5234</td></tr>
+    <tr><td>100/S373P</td><td>49</td><td>0.0835</td></tr>
+  </table>
+
+
+<script>
+  /* Autosort tableheaders, from Stack Overflow; https://stackoverflow.com/questions/14267781/sorting-html-table-with-javascript*/
+  const getCellValue = (tr, idx) =>
+    tr.children[idx].innerText || tr.children[idx].textContent;
+  
+  const comparer = (idx, asc) => (a, b) =>
+    ((v1, v2) =>
+      v1 !== "" && v2 !== "" && !isNaN(v1) && !isNaN(v2)
+        ? v1 - v2
+        : v1.toString().localeCompare(v2))(
+      getCellValue(asc ? a : b, idx),
+      getCellValue(asc ? b : a, idx)
+    );
+  
+  // do the work...
+  document.querySelectorAll("th").forEach(th =>
+    th.addEventListener("click", () => {
+      const table = th.closest("table");
+      Array.from(table.querySelectorAll("tr:nth-child(n+2)"))
+        .sort(
+          comparer(
+            Array.from(th.parentNode.children).indexOf(th),
+            (this.asc = !this.asc)
+          )
+        )
+        .forEach(tr => table.appendChild(tr));
+    })
+  );
+</script>
+
+</body>
+</html>
